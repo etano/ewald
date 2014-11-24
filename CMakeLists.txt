@@ -103,7 +103,7 @@ INCLUDE(${PROJECT_CMAKE}/FindLA.cmake)
 #-------------------------------------------------------------------
 # extra libraries
 #-------------------------------------------------------------------
-LINK_LIBRARIES("-lz -lpthread -lm")
+LINK_LIBRARIES("-lz -lpthread -lm -gmp -fopenmp")
 
 #-------------------------------------------------------------------
 # add sources
@@ -119,5 +119,5 @@ src/Splines/CubicSpline.cc
 src/Splines/Grid.cc
 src/Splines/QuinticSpline.cc)
 ADD_EXECUTABLE(ewald ${SRCS})
-TARGET_LINK_LIBRARIES(ewald ${LIBS})
+TARGET_LINK_LIBRARIES(ewald ${LIBS} ${LA_LIBS} ${BLITZ_LIBS})
 INSTALL(TARGETS ewald DESTINATION $ENV{HOME}/bin)
