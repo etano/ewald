@@ -1,0 +1,16 @@
+*.vim
+*.swp
+*.h5
+*.swo
+*.png
+bin/
+CMakeFiles/
+*.o
+build/
+src/Scripts/*.txt
+*.tags
+*.cscope*
+*.pyc
+lib/
+include/
+depends/
